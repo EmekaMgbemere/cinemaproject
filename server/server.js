@@ -1,17 +1,5 @@
 const express = require("express");
 const mongoose  = require('mongoose');
-STATIC_DIR= "../../showbux/client"
-ACCESS_TOKEN="join4iohq3tirhq34or3oirnh39r23urohirbk22urhrn292j2j2rj02rj2r"
-REFRESH_TOKEN="40923rjj092jerni2-0j29ej09j02nr2h0rjhjr209rj20jr209jrjmr0923rj09"
-
-FLW_SECRET_KEY="FLWSECK_TEST-c2dedda3896cb61397753959af62b95b-X"
-FLW_PUBLIC_KEY="FLWPUBK_TEST-41f2f202752d383f5af8b158cbcba3b1-X"
-
-FLW_SECRET_HASH='FLWSECK_TEST24bb651ccaf4'
-
-jwtSecret="mysecrettoken"
-
-PORT = "6969"
 const morgan = require('morgan');
 const app = express();
 const cors = require('cors');
@@ -32,7 +20,7 @@ const jwt = require('jsonwebtoken');
 const gravatar = require('gravatar');
 const Flutterwave = require('flutterwave-node-v3');
 const Flutter = require('../../showbux/server/models/flutterpayment.js')
-const flw = new Flutterwave(FLW_PUBLIC_KEY);
+const flw = new Flutterwave('/server/process.env.FLW_PUBLIC_KEY', '/server/process.env.FLW_SECRET_KEY');
 const dotenv = require('dotenv');
 var store = require('store');
 const multer = require("multer");
@@ -45,7 +33,7 @@ app.use(cors());
 const URL = "mongodb://127.0.0.1:27017/showbux";
 
 
-const port = PORT;
+const port = process.env.PORT;
 
 require('dotenv').config();
 
@@ -146,7 +134,7 @@ await user.save();
 
     jwt.sign(
       payload, 
-      jwtSecret,
+      process.env.jwtSecret,
       {expiresIn: '1d'}, 
       (err, token) =>{
         if(err) throw err;
@@ -240,7 +228,7 @@ await user.save();
 
     jwt.sign(
       payload, 
-      jwtSecret,
+      process.env.jwtSecret,
       {expiresIn: '1d'}, 
       (err, token) =>{
         if(err) throw err;
@@ -390,7 +378,7 @@ user: {
 
 jwt.sign(
 payload,
-jwtSecret,
+process.env.jwtSecret,
 { expiresIn: '1d' },
 async (err, token) => {
   if (err) throw err;
