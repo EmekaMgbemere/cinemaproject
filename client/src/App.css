@@ -1,0 +1,1113 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.emtable {
+  width: 50vw;
+}
+
+.emshownavlinks2{
+  display: none;
+}
+
+#emnotfound {
+  position: relative;
+  height: 100vh;
+  background: #030005;
+}
+
+#emnotfound .emnotfound {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.emloc{
+  color: white;
+  text-decoration: none;
+}
+.emnotfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.emnotfound .emnotfound-404 {
+  position: relative;
+  height: 180px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+
+.emnotfound .emnotfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% , -50%);
+      -ms-transform: translate(-50% , -50%);
+          transform: translate(-50% , -50%);
+  font-size: 224px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -12px;
+  color: #030005;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0px #8400ff, 1px 1px 0px #ff005a;
+  letter-spacing: -20px;
+}
+
+
+.emnotfound .emnotfound-404 h2 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 0px #8400ff;
+  letter-spacing: 13px;
+  margin: 0;
+}
+
+.emnotfound a {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #ff005a;
+  text-decoration: none;
+  border: 2px solid;
+  background: transparent;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+
+.emnotfound a:hover {
+  color: #8400ff;
+}
+
+@media only screen and (max-width: 767px) {
+    .emnotfound .emnotfound-404 h2 {
+        font-size: 24px;
+    }
+    .emshownavlinks1{
+      display: none;
+    }
+  }
+
+@media only screen and (max-width: 480px) {
+  .emshownavlinks1{
+    display: none;
+  }
+  .emnotfound .emnotfound-404 h1 {
+      font-size: 182px;
+  }
+}
+
+/*EMHOME BEGIN*/
+.emhome{
+  text-align: center;
+  position: relative;
+  background-color: black;
+}
+
+.emhomep{
+  color: white;
+  position: absolute;
+  /* width: 65vw; */
+  margin: 10vw 15vw;
+  font-size: 5vw;
+}
+.emhomep1{
+    font-size: 5vw;
+    font-weight: bolder;
+    color: white;
+}
+.emhomep2{
+    font-size: 2.2vw;
+}
+
+
+
+.emhomep2button{
+  margin: 3% 7%;
+  padding: 2% 5%;
+  color: white;
+  background-color:transparent;
+  font-size: 2vw;
+  border: 3px solid #fff;
+}
+
+.emhomep2button:hover{
+  color:black;
+  background-color: white;
+  border-color: white;
+}
+.emhomediv2{
+  display: flex;
+  padding: 3% 10%;
+  color: white;
+}
+
+.emhomediv22, .emhomediv23{
+  width: 75vw;
+}
+.emhr{  
+    height: 10px;
+    background-color: rgb(62, 62, 62);
+    margin: 0;
+}
+/*EMHOME END*/
+
+
+/*NAV BEGIN*/
+.emnavdiv{
+  /* position:relative; */
+  background-color: black;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);  
+}
+
+.emnavdiv button{
+    color:white;
+    border-color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.emnavsearchdiv{
+  position: relative;
+  align-items: center; 
+}
+.emnavsearchres{
+  position: absolute;
+  text-align: center;
+  margin: 1% 10%;
+  width: 80%;
+}
+.emnavsearchdivsearchb{
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  margin: 0.5% 5%;
+}
+.emnavdiv button:hover{
+  background-color: white;
+  color: black !important;
+}
+
+#emnavsearch{
+  background-color: #151515;
+  color: #1a1919;
+  border: none;
+  height: 40px;
+  margin: 0 5px;
+}
+
+
+
+.embackgroundimage{
+    /* height: 75vh; */
+  background-size: cover;
+  background-image: url('./components/images/homepageheropic.png');
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);  
+}
+
+
+/*NAV END*/
+
+/*FOOTER*/
+
+.emfooter{
+  background-color: #0f0021;
+  padding: 2vw 5vw;
+  color: white;
+}
+
+.emfooterli{
+  font-size: 15px;
+  padding: 2px 0;
+}
+
+.emfooterh5{
+  margin: 20px 0;
+}
+
+.emfooterrow{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.emmoviedisplay {
+  display: flex;
+  justify-content: flex-start;
+}
+.cube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cube p{
+  color: white;
+
+}
+
+.emfootercol ul{
+  list-style-type: none;
+    margin: 0;
+  padding: 0;
+}
+
+.emfootercol li{
+  padding: 4px 0;
+}
+
+.emfootercol i{
+  padding-right: 10px;
+}
+
+.emfootercol li a{
+  text-decoration: none; 
+  color: white;
+  cursor: pointer;
+}
+
+.emfootercol{
+  margin: 15px 0;
+}
+
+.empaymenticonsul{
+  display: flex;
+}
+
+.empaymenticonsul li{
+  padding-right: 15px;
+}
+
+.emmm {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
+
+.emshownavlinksa, .emshownavlinksaa{
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  }
+
+.emshownavlinks button:hover{
+  color:blueviolet;
+}
+
+.emshownavlinks button i{
+  padding-right: 7px;
+}
+
+.emshownavlinks button{
+  font-weight: 700;
+}
+
+.emshownavlinks{
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+}
+
+.emmovsel{
+  display: flex;
+}
+
+.emflexmdsm{
+  display: flex;
+  flex-direction: row;
+}
+
+.emnavsearchdiv{
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .emregister{
+    display: block;
+    flex-direction: column;
+  }
+  .emregisterform{
+    width: 70vw;    
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .emmm ,.movmov{
+  display: flex;
+  text-align: center;
+} 
+
+.emregisterimg img{
+  display: none;
+}
+}
+
+@media (max-width: 991px) {
+
+  .emnavsearchdivsearchbsmall{
+    display: none;
+  }
+
+  .emnavsearchdiv{
+    display: inline-block;
+  }
+  .emnavsearchres{
+    position: absolute;
+    z-index: 1;
+  }
+
+  .emshownavlinks2{
+    display:inline-block;
+  }
+
+  .emmovdets{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 15%;
+  }
+
+   .movmov{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .emshownavlinksaa{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .emcin3{
+    position: absolute;
+    border: 2px solid red;
+    left: -200px;
+  }
+ 
+
+.emcin3 span{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: bolder;
+    margin: 55% 0 0 0;
+    line-height: 30px;
+    width: 80vw;
+    border: 2px solid blue;
+    left: -37vw;
+    top: 20vw;
+  } 
+
+
+
+  .emcin3img{
+    display: none;
+  }
+
+  .emflexmdsm{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .emshownavlinksa{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-left: -200px;
+    width: 200px;
+    text-align: center;
+
+  }
+
+  .emshownavlinks button{
+    border:none ;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .emregisterimg{
+    display: none;
+  }
+  .emshownavlinks1{
+    display: none;
+  }
+
+  .emaddashsmleft li:hover{
+    background-color: none;
+    border-right: none;
+    padding: none;
+  }
+}
+
+@media (max-width: 650px) {
+ 
+  .emaddashsmleft li:hover{
+    background-color: none;
+    border-right: none;
+    padding: none;
+  }
+  
+  .emaddashsmleft li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40%;
+  }
+
+  .emaddashsmleft span{
+    display: none;
+  }
+
+  .emmoviedisplay, .cube{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .emfooter{
+    display: none;
+  }
+
+  .emmovsel{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+  } 
+
+  .emmovdets, .movmov {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+  } 
+
+  .emmm , .movmov{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } 
+  
+  
+  .emcoundashsear{
+    padding: 0 10% ;
+  }
+
+  .emfooterrow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 26%;
+    text-align: center;
+  } 
+
+  .empaymenticons, .emusersignup1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .emusersignupform{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: none;
+    margin: 5vw 0;
+  }
+  .emusersignup1{
+    width: 100%;
+    margin: 10%;
+  }
+  .emusersignup2{
+    display: none;
+  }
+  .emticketmoviedetails{
+    width: 100vw;
+    padding: 2%;
+  }
+
+  .emticketmoviedetailsdiv{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;    
+  }
+  .registerimg img{
+    width: 50vw;
+    height: auto;
+  }
+
+
+  .emregister{
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+  }
+
+  .emshownavlinks1{
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 850px) {
+  .emmoviedisplay, .cube {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .emregister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .emregisterimg{
+    display: none;
+  }
+
+
+    .registerimg{
+      display: none;
+    }
+
+    .emregisterform{
+      padding: 1vw;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .emcoundashsear{
+      padding: 0 10% ;
+    }
+  }
+
+
+/*FOOTER*/
+
+/*TABLE BEGIN*/
+.embookinghistory{
+  margin: 2vw 5vw;
+
+}
+/*TABLE END*/
+
+/*USERSIGNUP BEGIN*/
+.emusersignupform{
+  background-color: red;
+  margin: 3.5vw 10vw;
+  height: 85vh;
+  display: flex;
+  border-radius: 10px;
+}
+
+.emusersignup1, .emusersignup2{
+  height: 90%;
+}
+
+.emusersignup1{
+  background-color: blue;
+  width: 60vw;
+  padding: 10w;
+}
+.emusersignup2{
+  width: 40vw;
+  background-color: blueviolet;
+}
+
+.emusersignupcarouselimagediv img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*USER SIGNUP END*/
+.embody{
+  display: flex;
+  justify-content: center;
+}
+
+.emcontainer{
+  width: 100%;
+  margin: 50px;
+  text-align: center;
+}
+
+.emselect{
+  display: block;
+  outline: none;
+  width: 600px;
+  max-width: 95%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/**/
+
+.emusersignupformstyle label{
+  font-size: smaller;
+}
+
+.emparallax{
+  padding-top: 10%;
+  min-height: 500px; 
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);  
+  background-image: url("./components/images/emheader.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.embg{
+background-color: #000000;
+}
+
+.emuserhomepageimgdiv{
+  max-width: 100vw;
+  max-height: 80vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.emcarousel{
+  height: 80%;
+  position: relative;
+  background-color: black;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);  
+}
+
+.emcarouseltext{
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 220px;
+  left: 16px;
+  font-size: clamp(20px, 3.5vw, 48px);
+  color: #fff;
+}
+.emheader{
+   font-family: 'Poppins', sans-serif;
+   top: 20vw;
+   left: 16px;
+   font-size: clamp(10px, 2vw, 48px);
+   background-color: transparent !important;
+  }
+
+
+.emcin1{
+  position: relative;
+}
+
+.emcin2{
+  position: absolute;
+  top:1vw;
+  font-family: 'Pacifico', cursive;
+  left: 10%;
+}
+
+.emcin3{
+  position: absolute;
+  top:1vw;
+  margin: 3% 0 0 30%;
+  font-weight: bolder;
+  font-size: 4vw;
+  line-height: 70px;
+  }
+
+
+
+
+.emcin4{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
+/*COUNTER DASHBOARD BEGIN*/
+.box {
+  border: black ridge 1px;
+  border-radius: 10px;
+  margin: 20px 20%;
+  width: fit-content;
+  height: fit-content;
+}
+
+  .emcoundashsear{
+    justify-content: center;
+  }
+
+  .emcounterdashboardcard{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin: 0 3%;
+    padding: 1%;
+    width: 90%;
+    backdrop-filter: blur(4px) saturate(137%);
+    -webkit-backdrop-filter: blur(4px) saturate(137%);
+    background-color: rgba(17, 25, 40, 0.43);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: #fff;
+    font-family: 'Concert One', cursive;
+  }
+
+
+  .emcounterdashboardcardimg{
+    width: 370px;
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    height: 20vh;
+  }
+
+  .emuserhomepagedflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+   .emuserhomepageimgimg{
+      width: 500px;
+      height: auto;
+      padding: 1%;
+      text-align: center;
+   } 
+ 
+  .emhomepagemodalbody img:hover{
+    background-color: gray;
+  }
+
+  .emhomepagemodalbody img{
+    margin: 0.5%;
+  }
+
+/*COUNTER DASHBOARD END*/
+
+/**/
+/*FORM CSS*/
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.3em 0.6em;
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #3819c2;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.modal-gil {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.emusersignupformstyle{
+  padding:20%;
+}
+.form-container {
+  width: 10%;
+}
+.form-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-group label {
+  width: 15%;
+}
+/*FORM END*/
+/*USERSIGNUP END*/
+
+
+/*TICKET START*/
+.emticketmaindiv{
+  border: 30px solid transparent;
+  padding: 5px;
+  margin: 5vw;
+  border-image: url('./components/images/ticketborder.jpg') 20% round;
+  text-align: center;
+}
+
+.movmov{
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  margin: 10px;
+  backdrop-filter: blur(2px) saturate(166%);
+  -webkit-backdrop-filter: blur(2px) saturate(166%);
+  background-color: rgba(58, 30, 30, 0.29);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  font-size: 1rem;
+  font-weight:500;
+}
+.emticketmoviedetailsdiv{
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.emticketmoviedetails{
+  width: 50vw;
+  padding: 20px;
+}
+
+.emticketmoviedetails img{
+  width: 100%;
+  height: auto;
+}
+
+.emticketinput{
+  width: 50px;
+  text-align: center;
+  border-color: rgb(201, 198, 198);
+}
+
+.emticketinputdiv{
+  display: flex;
+  margin: 5% 0 0 0;
+}
+
+.emticketinputdiv2 select{
+  font-size: 12px;
+}
+
+
+/*TICKET END*/
+
+.emselect{
+  display: block;
+  outline: none;
+  width: 600px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight:normal;
+}
+
+#second, #third{
+  display: none;
+}
+
+/*EM REGISTER*/
+.emregister{
+  background-image: url('./components/images/backgroundimage.png');
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);  
+  display: flex;
+  padding: 1.5vw 15vw;
+  height: 87vh;
+}
+.emregisterinput input{
+  height: 30px;
+}
+.emregisterinput label{
+  font-size:medium;
+}
+
+.emregisterform{
+  width: 60vw;
+  background-color: #000;
+  opacity: 0.8;
+  color: white;
+  font-weight:bolder;
+  padding: 2vw 2%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.emregisterimg{
+  width: 50vw; 
+  display: flex;
+  height: auto;
+}
+
+.emskeleton{
+  opacity: .7;
+  animation: emskeleton-loading 1s linear infinite alternate;
+}
+
+.emskeleton-text{
+  width: 100%;
+  height: .5rem;
+  margin-bottom: .25rem ;
+  border-radius:  .125rem;
+}
+
+.emskeleton-text:last-child{
+  margin-bottom: 0;
+  width: 80%;
+}
+@keyframes emskeleton-loading {
+  0%{
+    background-color:  hsl(200, 20%, 70%);
+  }  
+  100%{
+    background-color:  hsl(200, 20%, 95%);
+  }  
+}
+.d-none{
+  display: none;
+}
+/*EM REGISTER*/
+
+/*SUN CSS*/
+.sun--reg {
+  width: 85%;
+  margin: 15% 0;
+}
+.sun-reg{
+  margin:5% 0;
+}
+/*SUN CSS*/
+.ccontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+}
+.ccontainer input{
+  width: 100%;
+  max-width: 300px;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/*ADMIN DASHBOARD START*/
+.emaddashsmleft{
+  width:15vw;
+  border-right: 1px solid rgb(239, 238, 238);
+  height: 100vh;
+}
+
+.emaddashsmleft li{
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Belanosima', sans-serif;
+  font-size: 100%;
+  padding: 15% 5%;
+  color:#898888
+}
+
+.emaddashsmleft p{
+  padding-top: 5%;
+  font-size: 2vw;
+  font-family: "Pacific";
+  color:#898888;
+  font-family: 'Belanosima', sans-serif;
+}
+
+.emaddashsmleft li:hover{
+  background-color: #ebe9e9;
+  border-right: 4px solid blue;
+}
+
+.emadminhall{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emaddashsmright{
+  width: 84vw;
+  height: auto;
+  display: flex;
+}
+
+.emadmininfo .card{
+  background-image: linear-gradient(to left, rgb(27, 9, 40) , rgb(16, 16, 92));
+}
+
+.emadmininfo h6{
+  color: #e78d05;
+}
+
+/*ADMIN DASHBOARD END*/
+
+
+
+  
