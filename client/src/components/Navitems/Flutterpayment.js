@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import bckimg from '../images/emheader.jpg'
 import Nav from './Nav';
@@ -17,9 +17,11 @@ const Flutterpayment = () => {
     Chosendate: localStorage.getItem("Chosendate"),
   });
 
+  const nav = useNavigate();
+
 
   const config = {
-    public_key: 'FLWPUBK_TEST-ce46d750f66f85ebb366a1a9ae88bbb0-X',
+    public_key: 'FLWPUBK_TEST-41f2f202752d383f5af8b158cbcba3b1-X',
     tx_ref: Date.now(),
     amount: theMovie.price,
     currency: 'NGN',
@@ -130,7 +132,7 @@ const Flutterpayment = () => {
                             axios.post('/flutterpayment', response)
                               .then((resp) => {
                                         console.log('Backend response:', resp.data);
-                                        window.location.href = '/';
+                                        nav('/movies');
                               })
                               .catch((error) => {
                                 console.error('Error sending data to the backend:', error);

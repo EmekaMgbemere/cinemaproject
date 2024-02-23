@@ -360,7 +360,7 @@ app.post('/login', [
     let user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(401).json({ error: 'Invalid Credentials A' });
+      return res.status(401).json({ error: 'Invalid Credentials. Try again' });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -429,9 +429,9 @@ app.post('/flutterpayment', async (req, res) => {
 
       console.log(`Server ${JSON.stringify(response)}`);
   
-      res.send('Received payment response successfully');
   
       if(response.status == "successful"){
+        res.send('Received payment response successfully');
 
         const newFlutter = new Flutter({
           transaction_id: response.transaction_id,
@@ -451,6 +451,8 @@ app.post('/flutterpayment', async (req, res) => {
               console.error('Error saving payment data:', error);
             } else {
               console.log('Payment data saved successfully' + newFlutter);
+              return res.status(200).json({ message: '/flutterpayment successfull!' });
+
             }
 
           })
