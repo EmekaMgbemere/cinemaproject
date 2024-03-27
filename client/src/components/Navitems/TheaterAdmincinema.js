@@ -3,6 +3,9 @@ import Admintopnav from "./Admin/Admintopnav";
 import TheaterAdminleftnav from "./TheaterAdminleftnav";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function TheaterAdmincinema(){
@@ -222,27 +225,27 @@ function TheaterAdmincinema(){
                         }
 
                 <div>
-                    <table className="table mx-4"
+                    <Table className="table mx-4"
                       border={"1px"}
                     >
-                        <thead>
-                                <tr>
-                                    <th >Counter</th>
-                                    <th >Counter Id</th>
-                                    <th >Theater Id</th>
-                                    <th > ACTIONS </th>
-                                </tr>
-                        </thead>
-                          <tbody>
+                        <Thead>
+                                <Tr>
+                                    <Th >Counter</Th>
+                                    <Th >Counter Id</Th>
+                                    <Th >Theater Id</Th>
+                                    <Th > ACTIONS </Th>
+                                </Tr>
+                        </Thead>
+                          <Tbody>
                               {
                                   table && table.map((cinema, id) => {
 
                                       return (
-                                          <tr key={id}>
-                                              <td >{cinema.selectedlocation}</td>
-                                              <td >{cinema._id}</td>
-                                              <td >{cinema.theaterID}</td>
-                                              <td >
+                                          <Tr key={id}>
+                                              <Td >{cinema.selectedlocation}</Td>
+                                              <Td >{cinema._id}</Td>
+                                              <Td >{cinema.theaterID}</Td>
+                                              <Td >
                                                 <div>
                                                     <Link onClick={() => handleDeleteCinema(cinema._id)} >
                                                       <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
@@ -251,14 +254,14 @@ function TheaterAdmincinema(){
                                                       <i className="fa-solid fa-pen-to-square" style={{ color: "#2450a8", marginRight: "10px" }} onClick={() => nav("/admineditcinema", { state : setCinema})}></i>
                                                     </Link>
                                                 </div>
-                                              </td>
-                                          </tr>
+                                              </Td>
+                                          </Tr>
                                       );
                               }
                               )
                                 }
-                            </tbody>
-                    </table>
+                            </Tbody>
+                    </Table>
                 </div>
              </div>
           </div>

@@ -2,6 +2,9 @@ import React, { useCallback, useEffect, useState } from "react";
 import TheaterAdminleftnav from "./TheaterAdminleftnav";
 import Admintopnav from "./Admin/Admintopnav";
 import { Link, useNavigate } from "react-router-dom";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 function Theateradmin(){
     
@@ -219,38 +222,38 @@ useEffect(() => {
                           </div>
                       <div>
                           {(!filteredData ? <p className="fs-2">Data Unavailable</p> :
-                              <table className="table m-3" border={"1px"}>
-                                <thead>
-                                    <tr>
-                                        <th >ID</th>
-                                        <th >UserType</th>
-                                        <th >Email</th>
-                                        <th >selected location</th>
-                                        <th >Actions</th>
-                                    </tr>
-                                </thead>
-                                  <tbody>
+                              <Table className="table m-3" border={"1px"}>
+                                <Thead>
+                                    <Tr>
+                                        <Th >ID</Th>
+                                        <Th >UserType</Th>
+                                        <Th >Email</Th>
+                                        <Th >selected location</Th>
+                                        <Th >Actions</Th>
+                                    </Tr>
+                                </Thead>
+                                  <Tbody>
                                   {
                                     filteredData && filteredData.map((user, id) => {
                                         return (
-                                            <tr key={id}>
-                                                <td >{user._id}</td>
-                                                <td >{user.userType}</td>
-                                                <td >{user.email}</td>
-                                                <td >{user.selectedlocation}</td>
-                                                <td>
+                                            <Tr key={id}>
+                                                <Td >{user._id}</Td>
+                                                <Td >{user.userType}</Td>
+                                                <Td >{user.email}</Td>
+                                                <Td >{user.selectedlocation}</Td>
+                                                <Td>
                                                     <div>
                                                         <Link onClick={() => handleDeleteUser(user._id)}>
                                                         <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
                                                         </Link>
                                                     </div>
-                                                </td>
-                                            </tr>
+                                                </Td>
+                                            </Tr>
                                         );
                                     })
                                   }
-                                  </tbody>
-                              </table> 
+                                  </Tbody>
+                              </Table> 
                               )}
                       </div>
                     </div>

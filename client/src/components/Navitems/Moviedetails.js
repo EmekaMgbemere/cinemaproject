@@ -4,6 +4,9 @@ import { useParams, useNavigate, Link} from "react-router-dom";
 import Footer from './Footer';
 import emmoviechair from '../images/emmoviechair.png';
 import cinemascreen from '../images/cinema.png';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 function Moviedetails(){
 
@@ -303,42 +306,42 @@ const seatColors = (index) => {
                     </div>
                   
                     <div>
-                        <table className="table table-sm"> 
-                              <thead>
-                                <tr>
-                                  <th scope=" text-left">Selection</th>
-                                  <th scope="col">Price</th>
-                                  <th scope="col">Seat</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Subtotal</th>
-                                </tr>
-                              </thead>
+                        <Table className="table table-sm"> 
+                              <Thead>
+                                <Tr>
+                                  <Th scope=" text-left">Selection</Th>
+                                  <Th scope="col">Price</Th>
+                                  <Th scope="col">Seat</Th>
+                                  <Th scope="col">Quantity</Th>
+                                  <Th scope="col">Subtotal</Th>
+                                </Tr>
+                              </Thead>
                                 
-                              <tbody>
+                              <Tbody>
                                 { selectedOption  && 
-                                    <tr className=''>
-                                        <th scope="row">{selectedOption}</th>
-                                        <td id='goldseat4did'> ₦ {This}.00</td>
-                                        <td> 
+                                    <Tr className=''>
+                                        <Th scope="row">{selectedOption}</Th>
+                                        <Td id='goldseat4did'> ₦ {This}.00</Td>
+                                        <Td> 
                                             <button type="button" className="btn btn-success" onClick={Seat} >Select Seat  </button>
-                                        </td>
-                                        <td><input type="number" id='goldseat4did' value={quantity} min="0" max="50" className='w-50' onChange={e=>setQuantity(e.target.value)} />
-                                        </td>
-                                        <td>{total}</td>
-                                    </tr>
+                                        </Td>
+                                        <Td><input type="number" id='goldseat4did' value={quantity} min="0" max="50" className='w-50' onChange={e=>setQuantity(e.target.value)} />
+                                        </Td>
+                                        <Td>{total}</Td>
+                                    </Tr>
                                   }
 
                                     { selectedOption ? `${none}` :
-                                      <tr>
-                                          <th scope="row"> </th>
-                                          <td className=''></td>
-                                          <td className=''></td>
-                                          <td className='fst-italic fw-bold'>Final Total:</td>
-                                          <td className=''>₦ {total}</td>
-                                      </tr>
+                                      <Tr>
+                                          <Th scope="row"> </Th>
+                                          <Td className=''></Td>
+                                          <Td className=''></Td>
+                                          <Td className='fst-italic fw-bold'>Final Total:</Td>
+                                          <Td className=''>₦ {total}</Td>
+                                      </Tr>
                                     }
-                              </tbody>
-                        </table>
+                              </Tbody>
+                        </Table>
                         
                           <div>
                               {seatTrue &&

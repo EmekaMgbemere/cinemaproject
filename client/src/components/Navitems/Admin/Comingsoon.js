@@ -3,6 +3,9 @@ import Admintopnav from "./Admintopnav";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import Adminleftnav from "./Adminleftnav";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function Comingsoon() {
@@ -266,31 +269,31 @@ return(
                     {err && <div className='text-danger'>{err} </div>}
                 </div>
                 <div className="m-3">
-                    <table className="table emtable" border={"1px"}>
-                        <thead>
-                            <tr className="" >
-                                <th>Movie Title</th>
-                                <th>Movie Description</th>
-                                <th>Movie Trailer</th>
-                                <th>Movie Duration</th>
-                                <th>Movie Location</th>
-                                <th>PG</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                          <tbody>
+                    <Table className="table emtable" border={"1px"}>
+                        <Thead>
+                            <Tr className="" >
+                                <Th>Movie Title</Th>
+                                <Th>Movie Description</Th>
+                                <Th>Movie Trailer</Th>
+                                <Th>Movie Duration</Th>
+                                <Th>Movie Location</Th>
+                                <Th>PG</Th>
+                                <Th>Actions</Th>
+                            </Tr>
+                        </Thead>
+                          <Tbody>
                                 {
                                 users.map((movie, _id) => 
                                 {
                                   return(
-                                    <tr key={movie._id}>
-                                    <td>{movie.movietitle}</td>
-                                    <td>{movie.moviedescription}</td>
-                                    <td>{movie.movietrailer}</td>
-                                    <td>{movie.movieduration}</td>
-                                    <td>{movie.movielocation}</td>
-                                    <td>{movie.pg}</td>
-                                    <td>
+                                    <Tr key={movie._id}>
+                                    <Td>{movie.movietitle}</Td>
+                                    <Td>{movie.moviedescription}</Td>
+                                    <Td>{movie.movietrailer}</Td>
+                                    <Td>{movie.movieduration}</Td>
+                                    <Td>{movie.movielocation}</Td>
+                                    <Td>{movie.pg}</Td>
+                                    <Td>
                                         <div>
                                             <Link onClick={() => handleDelete(movie._id)}>
                                             <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
@@ -299,12 +302,12 @@ return(
                                             <i className="fa-solid fa-pen-to-square" style={{ color: "#2450a8", marginRight: "10px" }} onClick={() => nav("/admineditmovie", { state : movie})}></i>
                                             </Link>
                                         </div>
-                                    </td>
-                                  </tr>
+                                    </Td>
+                                  </Tr>
                                   )
                                 })}
-                          </tbody>
-                    </table>
+                          </Tbody>
+                    </Table>
                 </div>
             </div>
       </div>

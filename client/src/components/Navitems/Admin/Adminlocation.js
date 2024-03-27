@@ -2,6 +2,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import Adminleftnav from "./Adminleftnav";
 import Admintopnav from "./Admintopnav";
 import { Link, useNavigate } from "react-router-dom";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 function Adminlocation() {
   const [create, setCreate] = useState(false);
@@ -156,11 +159,11 @@ function Adminlocation() {
         <div>
           <Admintopnav />
         </div>
-        <div style={{ width: "90vw" }} className="d-flex">
+        <div className="d-flex">
             <div className="">
               <Adminleftnav />
             </div>
-            <div className="w-100">
+            <div className="">
               <div> {err && <div className="text-danger"> {err}</div>}</div>
                   <div>
                       <div className="m-4">
@@ -257,30 +260,30 @@ function Adminlocation() {
                       )}
                   </div>
                 <div className="">
-                  <table className="table"
+              <Table className="table"
                   border={'1px'}
                   >
-                    <thead>
-                      <tr>
-                        <th>Location</th>
-                        <th>Picture</th>
-                        <th>State</th>
-                        <th>City</th>
-                        <th>Street</th>
-                        <th>House Number</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
+                    <Thead>
+                      <Tr>
+                        <Th>Location</Th>
+                        <Th>Picture</Th>
+                        <Th>State</Th>
+                        <Th>City</Th>
+                        <Th>Street</Th>
+                        <Th>House Number</Th>
+                        <Th>Action</Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody className="">
                       {allImage.map((data, _id) => (
-                        <tr key={data._id}>
-                          <td >{data.location}</td>
-                          <td><img width={50} height={50} src={data.image} alt="thisimg" /></td>
-                          <td >{data.state}</td>
-                          <td >{data.city}</td>
-                          <td >{data.street}</td>
-                          <td >{data.housenumber}</td>
-                          <td >
+                        <Tr key={data._id}>
+                          <Td >{data.location}</Td>
+                          <Td><img width={50} height={50} src={data.image} alt="thisimg" /></Td>
+                          <Td >{data.state}</Td>
+                          <Td >{data.city}</Td>
+                          <Td >{data.street}</Td>
+                          <Td >{data.housenumber}</Td>
+                          <Td >
                             <div >
                                 <Link onClick={() => handleDeleteLocation(data._id)} >
                                 <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
@@ -289,15 +292,14 @@ function Adminlocation() {
                                 <i className="fa-solid fa-pen-to-square" style={{ color: "#2450a8", marginRight: "10px" }} onClick={() => nav("/admineditlocation", { state : thisLocation})}></i>
                                 </Link>
                             </div>
-                          </td>
-                        </tr>
+                          </Td>
+                        </Tr>
                       ))}
-                    </tbody>
-                  </table>
+                    </Tbody>
+                  </Table>
                 </div>
             </div>
            
-            
         </div>
         
       </div>

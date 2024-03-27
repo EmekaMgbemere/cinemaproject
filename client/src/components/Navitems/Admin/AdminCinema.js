@@ -2,6 +2,9 @@ import React, { useEffect, useState, useCallback } from "react";
 import Adminleftnav from "./Adminleftnav";
 import Admintopnav from "./Admintopnav";
 import { Link } from "react-router-dom";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function AdminCinema(){
@@ -210,41 +213,41 @@ useEffect(() => {
                                 }
                           </div>
                           <div>
-                              <table className="table m-3" border={"1px"}>
-                                <thead>
-                                        <tr>
-                                            <th >ID</th>
-                                            <th >UserType</th>
-                                            <th >Email</th>
-                                            <th >Location</th>
-                                            <th >Cinema Name</th>
-                                            <th >Actions</th>
-                                        </tr>
-                                </thead>
-                                  <tbody>
+                              <Table className="table" border={"1px"}>
+                                <Thead>
+                                        <Tr>
+                                            <Th >ID</Th>
+                                            <Th >UserType</Th>
+                                            <Th >Email</Th>
+                                            <Th >Location</Th>
+                                            <Th >Cinema Name</Th>
+                                            <Th >Actions</Th>
+                                        </Tr>
+                                </Thead>
+                                  <Tbody>
                                   {
                                     displayUsertype && displayUsertype.map((user, id) => {
                                         return (
-                                            <tr key={id}>
-                                                <td >{user._id}</td>
-                                                <td >{user.userType}</td>
-                                                <td >{user.email}</td>
-                                                <td >{user.selectedlocation}</td>
-                                                <td >{user.cinemaName}</td>
-                                                <td>
+                                            <Tr key={id}>
+                                                <Td >{user._id}</Td>
+                                                <Td >{user.userType}</Td>
+                                                <Td >{user.email}</Td>
+                                                <Td >{user.selectedlocation}</Td>
+                                                <Td >{user.cinemaName}</Td>
+                                                <Td>
                                                         <div>
                                                             <Link onClick={() => handleDeleteUser(user._id)}>
                                                             <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
                                                             </Link>
                                                            
                                                         </div>
-                                                </td>
-                                    </tr>
+                                                </Td>
+                                    </Tr>
                                         );
                                     })
                                     }
-                                  </tbody>
-                              </table> 
+                                  </Tbody>
+                              </Table> 
                           </div>
                       
                     </div>

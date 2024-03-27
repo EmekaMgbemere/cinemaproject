@@ -4,6 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 import logo from "../images/register/eventbuxicon.png"
 import Cinemaleftnav from "../Navitems/Admin/Cinemaleftnav";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function Cinemahall() {
@@ -140,37 +143,37 @@ function Cinemahall() {
                             <div className="" style={{ 'margin': '0 1%' }}>
 
                             </div>
-                            <table className="table emtable"
+                            <Table className="table emtable"
                                 border={"1px"}
                               >
-                                <thead>
-                                  <tr >
-                                    <th>Movie Name</th>
-                                    <th>Movie Date</th>
-                                    <th>Movie Time</th>
-                                    <th>Movie Hall</th>
-                                    <th>Price</th>
-                                    <th>Book Now</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
+                                <Thead>
+                                  <Tr >
+                                    <Th>Movie Name</Th>
+                                    <Th>Movie Date</Th>
+                                    <Th>Movie Time</Th>
+                                    <Th>Movie Hall</Th>
+                                    <Th>Price</Th>
+                                    <Th>Book Now</Th>
+                                  </Tr>
+                                </Thead>
+                                <Tbody>
                                   {
                                     movieshow && movieshow.map((cin, _id) => {
                                       return (
-                                        <tr key={_id}>
-                                          <td>{cin.movietitle}</td>
-                                          <td>{cin.moviedate}</td>
-                                          <td>{cin.movietime}</td>
-                                          <td>{cin.theater}</td>
-                                          <td>{cin.price}</td>
-                                          <td><button className="btn btn-primary" onClick={() => handleBookNow(cin)} data-bs-toggle="modal" data-bs-target="#exampleModalToggle"> Book Now</button></td>
+                                        <Tr key={_id}>
+                                          <Td>{cin.movietitle}</Td>
+                                          <Td>{cin.moviedate}</Td>
+                                          <Td>{cin.movietime}</Td>
+                                          <Td>{cin.theater}</Td>
+                                          <Td>{cin.price}</Td>
+                                          <Td><button className="btn btn-primary" onClick={() => handleBookNow(cin)} data-bs-toggle="modal" data-bs-target="#exampleModalToggle"> Book Now</button></Td>
                                         
-                                        </tr>
+                                        </Tr>
                                       )
                                     })
                                   }
-                                </tbody>
-                            </table>
+                                </Tbody>
+                            </Table>
                         </div>
                         <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
                           <div className="modal-dialog modal-dialog-centered">
@@ -224,30 +227,30 @@ function Cinemahall() {
                         </div>
              <div className="" style={{ 'margin': '0 2%' }}>
                 <p className="fs-2">Successful Bookings: </p>
-                  <table className="table emtable"
+                  <Table className="table emtable"
                       border={"1px"}
                     >
-                      <thead>
-                        <tr >
-                          <th>Movie Name</th>
-                          <th>Movie Time</th>
-                          <th>Movie Hall</th>
-                        </tr>
-                      </thead>
-                      <tbody>
+                      <Thead>
+                        <Tr >
+                          <Th>Movie Name</Th>
+                          <Th>Movie Time</Th>
+                          <Th>Movie Hall</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
                         {
                           table && table.map((cin, _id) => {
                             return (
-                              <tr key={_id}>
-                                <td>{cin.movietitle}</td>
-                                <td>{cin.movietime}</td>
-                                <td>{cin.theater}</td>
-                              </tr>
+                              <Tr key={_id}>
+                                <Td>{cin.movietitle}</Td>
+                                <Td>{cin.movietime}</Td>
+                                <Td>{cin.theater}</Td>
+                              </Tr>
                             )
                           })
                         }
-                      </tbody>
-                  </table>
+                      </Tbody>
+                  </Table>
               </div>
                     </div>
                   </div>

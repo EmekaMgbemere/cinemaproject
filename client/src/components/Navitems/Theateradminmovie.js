@@ -4,6 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 import logo from "../images/register/eventbuxicon.png";
 import TheaterAdminleftnav from "./TheaterAdminleftnav";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 
@@ -410,44 +413,44 @@ function Theateradminmovie() {
                             }
                           </div>
                           {err && <div className='text-danger'>{err} </div>}
-                          <table className="table emtable my-5"
+                          <Table className="table emtable my-5"
                               border={"1px"}
                             >
-                              <thead>
-                                <tr >
-                                  <th>Movie Name</th>
-                                  <th>Movie Date</th>
-                                  <th>Movie Time</th>
-                                  <th>Movie Hall</th>
-                                  <th>Price</th>
-                                  <th>NumImages</th>
-                                  <th>Theaterlocation</th>
-                                  <th>Actions</th>
-                                </tr>
-                              </thead>
-                              <tbody>
+                              <Thead>
+                                <Tr >
+                                  <Th>Movie Name</Th>
+                                  <Th>Movie Date</Th>
+                                  <Th>Movie Time</Th>
+                                  <Th>Movie Hall</Th>
+                                  <Th>Price</Th>
+                                  <Th>NumImages</Th>
+                                  <Th>Theaterlocation</Th>
+                                  <Th>Actions</Th>
+                                </Tr>
+                              </Thead>
+                              <Tbody>
                                 {
                                   movieshow && movieshow.map((cin, _id) => {
                                     return (
-                                      <tr key={_id}>
-                                        <td>{cin.movietitle}</td>
-                                        <td>{cin.moviedate}</td>
-                                        <td>{cin.movietime}</td>
-                                        <td>{cin.theater}</td>
-                                        <td>{cin.price}</td>
-                                        <td>{cin.numImages}</td>
-                                        <td>{cin.theaterlocation}</td>
-                                        <td>
+                                      <Tr key={_id}>
+                                        <Td>{cin.movietitle}</Td>
+                                        <Td>{cin.moviedate}</Td>
+                                        <Td>{cin.movietime}</Td>
+                                        <Td>{cin.theater}</Td>
+                                        <Td>{cin.price}</Td>
+                                        <Td>{cin.numImages}</Td>
+                                        <Td>{cin.theaterlocation}</Td>
+                                        <Td>
                                           <Link onClick={() => handleDelete(cin._id)} >
                                             <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
                                           </Link>
-                                        </td>
-                                      </tr>
+                                        </Td>
+                                      </Tr>
                                     )
                                   })
                                 }
-                              </tbody>
-                          </table>
+                              </Tbody>
+                          </Table>
                         </div>
                         <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
                           <div className="modal-dialog modal-dialog-centered">

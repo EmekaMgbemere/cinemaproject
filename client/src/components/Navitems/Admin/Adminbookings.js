@@ -4,6 +4,9 @@ import DataTable from "react-data-table-component";
 import { BiChevronUp } from "react-icons/bi";
 import Adminleftnav from "./Adminleftnav";
 import dayjs from "dayjs";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 var relativeTime = require("dayjs/plugin/relativeTime");
 dayjs.extend(relativeTime);
@@ -112,34 +115,34 @@ return (
                 />
                 <div>
                     <p>THEATER BOOKING</p>
-                    <table className="table mx-2"
+                    <Table className="table"
                       border={"1px"}
                     >
-                        <thead>
-                                <tr>
-                                    <th >Theater Price</th>
-                                    <th >Theater userType</th>
-                                    <th >Theater Movietitle</th>
-                                    <th >Theater Movietime</th>
-                                    <th >Theater </th>
-                                </tr>
-                        </thead>
-                          <tbody>
+                        <Thead>
+                                <Tr>
+                                    <Th >Theater Price</Th>
+                                    <Th >Theater userType</Th>
+                                    <Th >Theater Movietitle</Th>
+                                    <Th >Theater Movietime</Th>
+                                    <Th >Theater </Th>
+                                </Tr>
+                        </Thead>
+                          <Tbody>
                               {
                                   adminBooking && adminBooking.map((thea, id) => {
                                       return (
-                                          <tr key={id}>
-                                              <td >{thea.price}</td>
-                                              <td >{thea.userType}</td>
-                                              <td >{thea.movietitle}</td>
-                                              <td >{thea.movietime}</td>
-                                              <td >{thea.theater}</td>
-                                          </tr>
+                                          <Tr key={id}>
+                                              <Td className='p-2'>{thea.price}</Td>
+                                              <Td className='p-2'>{thea.userType}</Td>
+                                              <Td className='p-2'>{thea.movietitle}</Td>
+                                              <Td className='p-2'>{thea.movietime}</Td>
+                                              <Td className='p-2'>{thea.theater}</Td>
+                                          </Tr>
                                       )
                                   })
                                 }
-                            </tbody>
-                    </table>
+                            </Tbody>
+                    </Table>
                 </div>
         </div>
 

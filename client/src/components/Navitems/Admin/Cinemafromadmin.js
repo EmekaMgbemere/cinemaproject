@@ -2,6 +2,9 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import Adminleftnav from "./Adminleftnav";
 import Admintopnav from "./Admintopnav";
 import { Link, useNavigate } from "react-router-dom";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function Cinemafromadmin(){
@@ -238,26 +241,26 @@ useEffect(() => {
                                 }
                           </div>
                           <div>
-                              <table className="table m-3" border={"1px"}>
-                                <thead>
-                                        <tr>
-                                            <th >ID</th>
-                                            <th >UserType</th>
-                                            <th >Email</th>
-                                            <th >Location</th>
-                                            <th >Actions</th>
-                                        </tr>
-                                </thead>
-                                  <tbody>
+                              <Table className="table" border={"1px solid black"}>
+                                <Thead>
+                                        <Tr>
+                                            <Th >ID</Th>
+                                            <Th >UserType</Th>
+                                            <Th >Email</Th>
+                                            <Th >Location</Th>
+                                            <Th >Actions</Th>
+                                        </Tr>
+                                </Thead>
+                                  <Tbody>
                                   {
                                     displayUsertype && displayUsertype.map((user, id) => {
                                         return (
-                                            <tr key={id}>
-                                                <td >{user._id}</td>
-                                                <td >{user.userType}</td>
-                                                <td >{user.email}</td>
-                                                <td >{user.selectedlocation}</td>
-                                                <td>
+                                            <Tr key={id}>
+                                                <Td >{user._id}</Td>
+                                                <Td >{user.userType}</Td>
+                                                <Td >{user.email}</Td>
+                                                <Td >{user.selectedlocation}</Td>
+                                                <Td>
                                                         <div>
                                                             <Link onClick={() => handleDeleteUser(user._id)}>
                                                             <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
@@ -266,14 +269,14 @@ useEffect(() => {
                                                             <i className="fa-solid fa-pen-to-square" style={{ color: "#2450a8", marginRight: "10px" }} onClick={() => nav("/adminedituser", { state : users})}></i>
                                                             </Link>
                                                         </div>
-                                                </td>
-                                          </tr>
+                                                </Td>
+                                          </Tr>
                                         );
                                     })
                                     }
-                                  </tbody>
+                                  </Tbody>
                                   
-                              </table> 
+                              </Table> 
                           </div>
                       
                     </div>

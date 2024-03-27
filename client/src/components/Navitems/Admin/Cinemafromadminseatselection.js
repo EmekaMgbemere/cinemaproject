@@ -2,6 +2,9 @@ import React, { useEffect, useState, useCallback } from "react";
 import Cinemafromadminleft from "./Cinemafromadminleft";
 import Admintopnav from "./Admintopnav";
 import { Link } from "react-router-dom";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 
 
 function Cinemafromadminseatselection(){
@@ -260,42 +263,42 @@ function handleChange2(event){
                           }
                       </div>
                           <div>
-                              <table className="table m-3" border={"1px"}>
-                                <thead>
-                                        <tr>
-                                            <th >ID</th>
-                                            <th >UserType</th>
-                                            <th >Email</th>
-                                            <th >Location</th>
-                                            <th >Theater Name</th>
-                                            <th >Seat Number</th>
-                                            <th >Actions</th>
-                                        </tr>
-                                </thead>
-                                  <tbody>
+                              <Table className="table m-3" border={"1px"}>
+                                <Thead>
+                                        <Tr>
+                                            <Th >ID</Th>
+                                            <Th >UserType</Th>
+                                            <Th >Email</Th>
+                                            <Th >Location</Th>
+                                            <Th >Theater Name</Th>
+                                            <Th >Seat Number</Th>
+                                            <Th >Actions</Th>
+                                        </Tr>
+                                </Thead>
+                                  <Tbody>
                                   {
                                     users && users.map((user, id) => {
                                         return (
-                                            <tr key={id}>
-                                                <td >{user._id}</td>
-                                                <td >{user.userType}</td>
-                                                <td >{user.email}</td>
-                                                <td >{user.selectedlocation}</td>
-                                                <td >{user.firstname}</td>
-                                                <td >{user.selectedusers}</td>
-                                                <td>
+                                            <Tr key={id}>
+                                                <Td >{user._id}</Td>
+                                                <Td >{user.userType}</Td>
+                                                <Td >{user.email}</Td>
+                                                <Td >{user.selectedlocation}</Td>
+                                                <Td >{user.firstname}</Td>
+                                                <Td >{user.selectedusers}</Td>
+                                                <Td>
                                                     <div>
                                                         <Link onClick={() => handleDeleteUser(user._id)}>
                                                         <i className="fa-solid fa-trash" style={{ color: "#ec1809", marginRight: "10px" }}></i>
                                                         </Link>
                                                     </div>
-                                                </td>
-                                    </tr>
+                                                </Td>
+                                    </Tr>
                                         );
                                     })
                                     }
-                                  </tbody>
-                              </table> 
+                                  </Tbody>
+                              </Table> 
                           </div>
                       
                     </div>

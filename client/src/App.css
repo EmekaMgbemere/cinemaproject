@@ -481,6 +481,9 @@ body {
 }
 
 @media (max-width: 650px) {
+  .emloc{
+    display:none;
+  }
  
   .emaddashsmleft li:hover{
     background-color: none;
